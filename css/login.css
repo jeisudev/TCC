@@ -1,0 +1,204 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: #EDEDED;
+    position: relative;
+}
+
+/*Estilização do conteudo*/
+.bg {
+    background-image: url('../img/recycling-animate.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.login {
+    backdrop-filter: blur(5px) brightness(0.6);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.header-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-login>h1 {
+    color: #00ff88;
+    font-size: 2.1vw;
+    text-transform: uppercase;
+}
+
+.main-login {
+    width: 400px;
+}
+
+.card-login {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 20px;
+    background-color: #E3E3E3;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #42424256;
+}
+
+.card-login>h1 {
+    color: #000;
+    font-size: 12pt;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.check {
+    letter-spacing: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    margin: 5px;
+    text-transform: uppercase;
+}
+
+.textfield {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.textfield>input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #D9D9D9;
+    color: #000;
+    font-size: 12pt;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield>label {
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.textfield>input ::placeholder {
+    color: #f0ffff94;
+}
+.opcoes{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+.opcoes label{
+    color: #000;
+}
+.opcoes a{
+    color: #000;
+    text-decoration: underline;
+}
+.header-login>h2 {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.btn-cadastro {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid #36D273;
+    transition: .3s ease-in-out all;
+}
+
+.btn-cadastro:hover {
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+    background-color: #36D273;
+    scale: 1.050;
+}
+
+.link-cadastro p {
+    color: #000;
+    text-align: center;
+}
+
+.link-cadastro a {
+    color: #000;
+    /* text-decoration: underline; */
+    text-align: center;
+    font-weight: bold;
+}
+
+.link-cadastro a:hover {
+    text-decoration: underline;
+
+}
+
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column;
+        height: 110vh;
+    }
+
+    .header-login>h1 {
+        display: none;
+    }
+
+    .header-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .header-login-image {
+        width: 40vw;
+    }
+
+    body {
+        background-color: #201b2c;
+    }
+}

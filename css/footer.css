@@ -1,0 +1,122 @@
+/*Estlização do Rodape*/
+footer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 100px;
+    width: 100vw;
+    background-color: #FFFFF3;
+    border: 1px saddlebrown solid;
+    z-index: 99;
+}
+
+    .rodape-superior {
+        color: #000;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 150px;
+    }
+
+    .rodape-superior .ajuda ul,
+    .institucional ul,
+    .pagamento ul,
+    .seguranca ul {
+        list-style-type: none;
+        color: #000;
+    }
+    .seguranca ul {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+    .rodape-superior .email input {
+        height: 30px;
+        color: #000;
+    }
+
+    .rodape-superior .seguranca ul img {
+        width: 30px;
+        height: 30px;
+        gap: 10vw;
+    }
+
+    .rodape-superior .ajuda ul li a,
+    .institucional ul li a,
+    .pagamento ul li a,
+    .seguranca ul li a .email p {
+        color: #000;
+        font-size: 12pt;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: capitalize;
+        display: block;
+        padding: 5px;
+    }
+
+    .ajuda {
+        color: #000;
+        margin-top: 15px;
+    }
+
+    .las {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+    }
+
+    .institucional {
+        margin-top: 15px;
+    }
+
+    .institucional li a {
+        color: #c2c2c2;
+    }
+
+    .seguranca {
+        margin-top: 15px;
+    }
+
+    .title {
+        color: #000;
+        text-transform: uppercase;
+        font-size: 15pt;
+        font-weight: 600;
+    }
+
+    .las p {
+        color: #000;
+    }
+
+
+    .rodape-inferior {
+        background-color: #FFFFF3;
+        height: 50px;
+    }
+    .rodape-inferior ul{
+        display: flex;
+        gap: 5px;
+        margin: 0 75px;
+    }
+    .rodape-inferior ul li{
+        padding: 15px;
+    }
+    .rodape-inferior ul li a {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #000;
+    }
+
+    .metodos-pagamento-inferior .title {
+        color: #000;
+    }
+    .metodos-pagamento-inferior ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        list-style-type: none;
+    }
+
+    .metodos-pagamento-inferior ul li img {
+        color: #000;
+        width: 30px;
+        margin: 0 5px;
+        padding-bottom: 20px;
+    }

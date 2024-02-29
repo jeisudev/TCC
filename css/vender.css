@@ -1,0 +1,323 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(191, 200, 160, 1) 50%, rgba(237, 237, 237, 1) 50%);
+}
+
+#container{
+    height: 100vh;
+}
+
+/*Estilização do conteudo*/
+main{
+    padding: 75px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+main form{
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+main .step-3{
+    width: 800px;
+}
+main .step-3 ul{
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+main .step-3 ul label {
+    width: 170px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #7C8950;
+    border-radius: 20px;
+    cursor: pointer;
+}
+main .step-3 ul label li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+}
+main .step-3 ul label li p{
+    color: white;
+}
+main .step-3 ul label li img{
+    width: 75px;
+}
+main form h1{
+    font-size: 25px;
+    color: #202020;
+    font-weight: 600;
+    text-align: center;
+    margin: 5px;
+}
+.textfield {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    width: 100%;
+}
+textarea {
+    resize: none;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #D9D9D9;
+    color: #000;
+    font-size: 12pt;
+    outline: none;
+    box-sizing: border-box;
+}
+.textfield input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #D9D9D9;
+    color: #000;
+    font-size: 12pt;
+    outline: none;
+    box-sizing: border-box;
+}
+.bg{
+    background-attachment: fixed;
+    top: 100px;
+    background-repeat: no-repeat;
+    background-size:43%;
+    background-position: center;
+    height: 100vh;
+}
+.btn-cadastro {
+    width: 100%;
+    padding: 16px 0px;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #00ff88;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid #36D273;
+    transition: .3s ease-in-out all;
+}
+
+.btn-cadastro:hover {
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+.textfield>label {
+    color: #000000;
+    font-weight: 600;
+}
+
+.textfield>input ::placeholder {
+    color: #f0ffff94;
+}
+
+/*Estilização do Menu-lateral*/
+.seletec-topic{
+    border-left: 6px solid #00FF29;
+    margin: 0 2px;
+}
+.disseletec-topic{
+    margin: 0 8px;
+}
+.menu-lateral{
+    padding: 75px 0;
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: #FFFFFF;
+}
+.menu-lateral .title{
+    padding: 0 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.menu-lateral .title p{
+    font-size: 20px;
+    color: #777777;
+    font-weight: 600;
+    display: none;
+}
+.menu-lateral .title img{
+    width: 20px;
+}
+.menu-lateral ul{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.menu-lateral ul li{
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 60px;
+}
+.menu-lateral ul li p{
+    display: none;
+    color: #777777;
+}
+.menu-lateral ul li img{
+    width: 25px;
+}
+/*Estlização do Rodape*/
+footer{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 10px;
+    position: relative;
+    bottom: 0;
+    background-color: #000000;
+}
+.rodape-superior{
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 200px;
+    
+}
+.rodape-superior .ajuda ul, .institucional ul, .pagamento ul, .seguranca ul{
+    list-style-type: none;
+    color: #ffffff;
+}
+
+.rodape-superior .email input{
+    height: 30px;
+    color: #ffffff;
+}
+
+.rodape-superior .seguranca ul img{
+    width: 30px;
+    height: 30px;
+    gap: 10vw;
+}
+.rodape-superior .ajuda ul li a, .institucional ul li a, .pagamento ul li a, .seguranca ul li a .email p{
+    color: #ffffff;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    display: block;
+    padding: 5px;
+}
+.metodos-pagamento-superior{
+    display: none;
+}
+.ajuda{
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+.las{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+.institucional{
+    margin-top: 15px;
+}
+.institucional li a{
+   color:#c2c2c2;
+}
+.seguranca{
+    margin-top: 15px;
+}
+.title{
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 15pt;
+    font-weight: 600;
+}
+.las p{
+    color: #ffffff;
+}
+.acompanhe-nos ul{
+    color: #ffffff;
+    margin: 5px 0 25px 0;
+    display: none;
+    list-style: none;
+}
+.acompanhe-nos ul li img{
+    color: #ffffff;
+    width: 30px;
+    margin: 0 5px;
+}
+.email-input{
+    border: 1px solid #201b2c;
+    border-radius: 0;
+    height: 45px;
+    color: #201b2c;
+    padding: 0 4px;
+}
+.email-btn{
+    height: 45px;
+    width: 45px;
+    background-color: #201b2c;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.rodape-inferior{
+    background-color: #030303;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.rodape-inferior p{
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(255, 255, 255);
+}
+.metodos-pagamento-inferior .title{
+    color: rgb(255, 255, 255);
+}
+.metodos-pagamento-inferior ul{
+    display: flex;
+    list-style: none;
+    list-style-type: none;
+}
+.metodos-pagamento-inferior ul li img{
+    color: rgb(255, 255, 255);
+    width: 30px;
+    margin: 0 5px;
+    padding-bottom: 20px;
+}

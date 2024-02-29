@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #EDEDED;
+    position: relative;
+}
+
+/*Estilização do Menu-lateral*/
+.seletec-topic{
+    border-left: 6px solid #00FF29;
+    margin: 0 2px;
+}
+.disseletec-topic{
+    margin: 0 8px;
+}
+.menu-lateral{
+    padding: 75px 0;
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: #FFFFFF;
+}
+.menu-lateral .title{
+    padding: 0 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.menu-lateral .title p{
+    font-size: 20px;
+    color: #777777;
+    font-weight: 600;
+    display: none;
+}
+.menu-lateral .title img{
+    width: 20px;
+}
+.menu-lateral ul{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.menu-lateral ul li{
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 60px;
+}
+.menu-lateral ul li p{
+    display: none;
+    color: #777777;
+}
+.menu-lateral ul li img{
+    width: 25px;
+}
+
+/*Estilização do conteudo*/
+.conteudo{
+    display: flex;
+    justify-content: center;
+    z-index: 50;
+}
+main ul{
+    margin: 120px 0px 30px 0 ;
+    height: 550px;
+    overflow-y: auto;
+}
+main ul::-webkit-scrollbar{
+    display: none;
+    border-radius: 15px;
+    background-color: white;
+}
+main ul::-webkit-scrollbar-thumb{
+    border-radius: 15px;
+    background-color: black;
+}
+main ul li{
+    display: flex;
+    background-color: #FFFFFF;
+    width: 700px;
+    margin: 0 0 15px 250px;
+    position: relative;
+}
+main ul li .card{
+    display: flex;
+    gap: 10px;
+}
+main ul li .card img{
+    width: 100px;
+    height: 100px;
+}
+main ul li .card .fav{
+    cursor: pointer;
+    width: 25px;
+    right: 50px;
+    position: absolute;
+}
+@media screen and (max-width: 1000px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins';
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+    #menu{
+        width: 100vw;
+    }
+    #menu .usos{
+        flex-wrap: wrap;
+    }
+    #menu .usos .cursor{
+        display: none;
+    }
+    #menu .usos .search-bar{
+        margin: 10px 0 5px 0;
+    }
+    .menu-lateral{
+        padding: 150px 0;
+        position: fixed;
+        width: 55px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #FFFFFF;
+    }
+    .menu-lateral ul li{
+        justify-content: center;
+    }
+    .menu-lateral .title{
+        padding: 0;
+    }
+    .menu-lateral .title p, .menu-lateral ul li p{
+        display: none;
+    }
+    .menu-lateral ul li img{
+        width: 25px;
+    }
+    .menu-lateral .title img{
+        margin: 0 auto;
+    }
+    main{
+        left: 100px;
+    }
+    .conteudo{
+        width: 100%;
+        height: 100%;
+    }
+}

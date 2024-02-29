@@ -1,0 +1,444 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #EDEDED;
+    position: relative;
+}
+
+/*Estilização do conteudo*/
+.conteudo{
+    margin: 85px auto 0 auto;
+    width: 1300px;
+    background-color: #fff;
+    border-radius: 25px;
+}
+.prod{
+    display: flex;
+    height: 550px;
+    align-items: center;
+    position: relative;
+}
+.prod-img{
+    position: relative;
+    width: 70%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    height:90%;
+    border-right: 1px solid white;
+    margin: 0 15px 0 0;
+}
+
+.back{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+svg:hover{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 46, 46, 0.534);
+}
+.prod-img div{
+    width: 600px;
+    height: 100%;
+}
+.varias-fotos li{
+    cursor: pointer;
+    height: 60px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    list-style: none;
+    margin: 15px ;
+}
+
+.varias-fotos li img{
+    width: 60px;
+    cursor: pointer;
+}
+.prod-img #minhaImagem{
+    margin: 0;
+}
+.comprar-campos{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.btn{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.comprar-campos button{
+    width: 250px;
+    height: 60px;
+    padding: 16px 0px;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin: 15px 0;
+    color: #00ff88;
+    background-color: transparent;
+    border: 2px solid #00ff88;
+    transition: .3s ease-in-out all;
+    cursor: pointer;
+}
+.comprar-campos button:hover {
+    cursor: pointer;
+    box-shadow: 0px 5px 20px -6px #00ff8052;
+    background-color: #38304e;
+}
+.opcoes ul{
+    margin: 25px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.opcoes ul li{
+    list-style: none;
+    margin: 0 5px;
+}
+.opcoes ul li img{
+    width: 50px;
+    height: 50px;
+    border: solid 1px white;
+    border-radius: 10px;
+}
+.title{
+    margin: 25px 0;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #38304e;
+}
+.prices .price{
+    font-size: 20px;
+    display: inline-block;
+    color: #38304e;
+}
+.prices .discount{
+    text-decoration: line-through;
+    color: #a8a8a8;
+}
+.prices .discount-perc{
+    color: rgba(255, 255, 255, 0.466);
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 12px;
+    color: #00ff88;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+.avaliation {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.avaliation p{
+    color: rgba(255, 255, 255, 0.664);
+    font-size: 8pt;
+    margin: 15px 5px;
+}
+.star-icon {
+    list-style-type: none;
+    cursor: pointer;
+    color: #ffe500;
+    font-size: 25px;
+    /* alterar o tamanho das estrelas */
+}
+.star-icon::before {
+    content: "\2605";
+}
+.star-icon.ativo~.star-icon::before {
+    content: "\2606";
+}
+.star-icon:hover .star-icon::before {
+    content: "\2605";
+}
+.star-icon:hover~.star-icon::before {
+    content: "\2606";
+}
+
+.area-abaixo{
+    display: flex;
+}
+.descricao-produto{
+    width: 70%;
+    margin: 35px 15px 0 0;
+    border-right: 1px solid white;
+}
+.descricao-produto .title{
+    font-size: 15pt;
+    margin: 0 30px;
+}
+.descricao-produto .campo-descricao{
+    width: 100%;
+    height: 800px;
+}
+
+.mais-produtos{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.mais-produtos .title{
+    font-size: 15pt;
+}
+.card{
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #2f2841;
+    transition: ease-in-out .3s all;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+.card:hover {
+    transform: scale(1.05);
+    -webkit-box-shadow: 0px 0px 20px -7px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 20px -7px rgba(255,255,255,1);
+    box-shadow: 0px 0px 20px -7px rgba(255,255,255,1);
+}
+.card-favorite-icon{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 25px;
+    bottom: 15px;
+    transition: all ease-in-out .3s;
+}
+.card-favorite-icon img{
+    width: 25px;
+}
+.card-favorite-icon:hover{
+    background-color: rgba(218, 218, 218, 0.699);
+}
+.card .card-img-main{
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+}
+.card .card-img-main img{
+    width: 80%;
+}
+
+.card .card-title{
+    text-align: center;
+    font-weight: 600;
+    font-size: 15pt;
+    color: white;
+}
+.price{
+    padding: 0 0 0 25px;
+}
+.card .card-price{
+    color: white;
+    font-size: 13pt;
+}
+.card .card-price-discount{
+    color: gray;
+    text-decoration: line-through;
+    font-size: 10pt;
+}
+b{
+    color: rgb(0, 197, 0);
+}
+.card .card-price-parcelas{
+    color: white;
+}
+.card-avaliation img{
+    width: 15px;
+}
+
+/*Estilização do Meme-lateral*/
+.seletec-topic {
+    border-left: 6px solid #00FF29;
+    margin: 0 2px;
+}
+
+.disseletec-topic {
+    margin: 0 8px;
+}
+
+.menu-lateral {
+    padding: 75px 0;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #FFFFFF;
+}
+
+.menu-lateral .title {
+    padding: 0 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-lateral .title p {
+    font-size: 20px;
+    color: #777777;
+    font-weight: 600;
+    display: none;
+}
+
+.menu-lateral .title img {
+    width: 20px;
+}
+
+.menu-lateral ul {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-lateral ul li {
+    display: flex;
+    height: 60px;
+}
+
+.menu-lateral ul li p {
+    display: none;
+    color: #777777;
+}
+
+.menu-lateral ul li img {
+    width: 25px;
+}
+
+@media screen and (max-width: 1400px){
+    .conteudo{
+        width: 1000px;
+    }
+    .prod{
+        height: 600px;
+    }
+    .prod-img div{
+        width: 100%;
+        object-fit: cover;
+        background-image: url("../img/yellow-bin.png");
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .conteudo{
+        width: 100%;
+        border-radius: 0;
+    }
+    #menu .usos{
+        display: none;
+    }
+    .prod{
+        flex-direction: column;
+        height: 100%;
+    }
+    .title{
+        margin: 0;
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+    .comprar-campos{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 15px;
+    }
+    .prod-img{
+        margin: 0;
+        width: 100%;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        border-right: 0px solid white;
+    }
+    .prod-img div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        object-fit: cover;
+        background-image: url("../img/paper bin.png");
+
+    }
+    #minhaImagem{
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    hr{
+        display: none;
+    }
+    .varias-fotos{
+        width: 100%;
+        display: flex;
+        position: static;
+        justify-content: space-around;
+    }
+    .varias-fotos li{
+        display: flex;
+        width: 100%;
+    }
+    .varias-fotos li img{
+        width: 60px;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+    .area-abaixo{
+        display: flex;
+        flex-direction: column;
+    }
+    .descricao-produto{
+        width: 100%;
+        border-top: 1px solid white;
+        border-right: 0px;
+        border-bottom: 1px solid white;
+    }
+    .descricao-produto .title{
+        font-size: 15pt;
+        text-align: center;
+        margin: 30px 0;
+    }
+    body{
+        background-color: #2f2841;
+    }
+    .mais-produtos{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5px;
+    }
+}

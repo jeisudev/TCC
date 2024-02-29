@@ -1,0 +1,858 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-size: 100%;
+    overflow-y: scroll;
+    background-color: #EDEDED;
+    position: relative;
+}
+
+/*Estilização do Menu*/
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    transition: all ease-in-out .5s;
+    z-index: 99;
+    backdrop-filter: blur(1px);
+    background-color: #7C8950;
+    /* cor padrão do menu */
+}
+
+.a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav.dark {
+    color: white;
+    /* cor do texto quando mudar */
+    backdrop-filter: blur(3px);
+}
+
+/* Adicione esta classe para ocultar o menu com animação suave */
+.hide-menu {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+/* Adicione esta classe para exibir o menu quando o mouse passa sobre ele */
+nav:not(.hide-menu) {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
+
+/* cor do texto dos itens do menu quando estiver na classe "dark" */
+nav.dark ul li a {
+    color: white;
+}
+
+nav .logotipo {
+    display: flex;
+    justify-content: flex-start;
+    width: 40%;
+    height: 100%;
+}
+
+nav .logotipo img {
+    width: 180px;
+    position: absolute;
+    top: 12px;
+}
+
+nav .usuario {
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+    height: 100%;
+}
+
+nav .usuario li {
+    transition: all ease-in-out .3s;
+    display: block;
+}
+
+nav .usuario li a,
+nav .usuario li p {
+    padding: 5px 10px;
+    display: block;
+    text-transform: capitalize;
+}
+
+nav ul {
+    display: flex;
+    gap: 38px;
+}
+
+nav ul li {
+    list-style-type: none;
+    width: 100%;
+}
+
+nav .usos {
+    height: 35px;
+}
+
+nav .usos ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .usos img {
+    width: 25px;
+}
+
+nav .usos a {
+    font-size: 15px;
+}
+
+
+nav ul .sub-menus {
+    height: auto;
+    width: 250px;
+    overflow: hidden;
+    /* margin: 1px; */
+    border-radius: 5px;
+    background: #444444;
+    position: absolute;
+    z-index: 99;
+    display: none;
+
+}
+
+nav ul.sub-menus li a {
+    display: flex;
+    width: 170px;
+    text-align: center;
+    font-size: 13.5px;
+    align-items: start;
+    justify-content: start;
+}
+
+nav ul.sub-menus .perfil {
+    padding: 15px 0;
+    width: 100%;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.334);
+}
+
+nav ul.sub-menus .perfil a {
+    width: 170px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+}
+
+nav ul.sub-menus .perfil img {
+    width: 60px;
+    border: 3px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+nav ul.sub-menus li img {
+    width: 12px;
+    display: block;
+    align-items: start;
+    margin: 5px 10px 5px 0;
+
+}
+
+nav ul.sub-menus .perfil p {
+    font-size: 12px;
+    text-align: left;
+    padding: 0;
+}
+
+nav ul.sub-menus a {
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 10px 15px;
+
+}
+
+nav .li-pai:hover ul.sub-menus {
+    display: block;
+}
+
+nav ul.sub-menus a:hover {
+    color: #00ff88;
+    text-decoration: underline;
+}
+
+nav ul.sub-menus .perfil a:hover {
+    background: transparent;
+    text-decoration: none;
+}
+
+nav ul.sub-menus .perfil .p-ola {
+    font-size: 10px;
+    color: #ffffff90;
+}
+
+nav ul.sub-menus .perfil .p-name {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+nav ul.sub-menus .dark-button {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.334);
+}
+
+nav ul.sub-menus .perfil-bloco {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.334);
+}
+
+nav ul.sub-menus .bloco-one {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.334);
+}
+
+nav ul.sub-menus .vender-bloco {
+    border-top: 1px solid 1px rgba(255, 255, 255, 0.334);
+    border-bottom: solid 1px rgba(255, 255, 255, 0.334);
+}
+
+nav ul.sub-menus .ajuda-bloco {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.334);
+}
+
+nav ul.sub-menus .sair-button a {
+    color: #FF0000;
+}
+
+.dropdown-arrow {
+    cursor: pointer;
+}
+
+.dropdown-arrow::after {
+    content: "\25BE";
+    margin-left: 5px;
+}
+
+.search-bar {
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    height: 29px;
+    width: 300px;
+    color: black;
+    padding: 0 15px;
+    border-radius: 25px;
+    border: transparent;
+}
+
+.search-bar label:nth-child(3)::after {
+    content: "\f13e";
+}
+
+.search-bar input::selection {
+    background-color: #00ff88;
+    margin: 2px;
+}
+
+/*Estilização do Conteudo*/
+#conteudo {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 60px auto;
+    padding: 55px;
+}
+
+.carrossel {
+    width: 1200px;
+    height: 340px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    top: 100px;
+}
+
+.slides {
+    width: 400%;
+    height: 340px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: all ease-in-out 2s;
+    display: flex;
+    justify-content: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 340px;
+}
+
+.navegacao-manual {
+    position: absolute;
+    width: 1200px;
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: #fff;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -25%;
+}
+
+#radio3:checked~.first {
+    margin-left: -50%;
+}
+
+#radio4:checked~.first {
+    margin-left: -75%;
+}
+
+.navigation-auto div {
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 1000px;
+    margin-top: 380px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background-color: white;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background-color: white;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background-color: white;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background-color: white;
+}
+
+/*Estilização do Carrinho*/
+.cart-container {
+    position: relative;
+    z-index: 50;
+}
+
+.open-cart-button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+}
+
+.cart-sidebar.open {
+    right: 0;
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/*Estilização do Cards*/
+.produtos {
+    max-width: 1200px;
+    position: relative;
+}
+
+.line {
+    margin: 50px 0 0 0;
+}
+
+h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15pt;
+    color: black;
+}
+
+.produtos .card-line ul {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 25px;
+    overflow-x: auto;
+}
+
+.produtos .card-line ul::-webkit-scrollbar {
+    display: none;
+}
+
+.produtos .card-line ul::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+.card {
+    width: 250px;
+    height: 350px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #525252;
+    transition: ease-in-out .3s all;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-favorite-icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 25px;
+    bottom: 15px;
+    transition: all ease-in-out .3s;
+}
+
+.card-favorite-icon img {
+    width: 25px;
+}
+
+.card-favorite-icon:hover {
+    background-color: rgba(218, 218, 218, 0.699);
+}
+
+.card .card-img-main {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.card .card-img-main img {
+    width: 100%;
+}
+
+.card .card-title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 15pt;
+    color: white;
+}
+
+.price {
+    padding: 0 0 0 25px;
+}
+
+.card .card-price {
+    color: white;
+    font-size: 13pt;
+}
+
+.card .card-price-discount {
+    color: gray;
+    text-decoration: line-through;
+    font-size: 10pt;
+}
+
+b {
+    color: #00ff88;
+}
+
+.card .card-price-parcelas {
+    color: white;
+}
+
+.card-avaliation img {
+    width: 15px;
+}
+
+/*Estlização do Rodape*/
+footer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 10px;
+    position: relative;
+    bottom: 0;
+    background-color: #FFFFF3;
+}
+
+.rodape-superior {
+    color: #000;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 150px;
+
+}
+
+.rodape-superior .ajuda ul,
+.institucional ul,
+.metodos-pagamento ul,
+.pagamento ul,
+.seguranca ul {
+    list-style-type: none;
+    color: #000;
+
+}
+
+.rodape-superior .email input {
+    height: 30px;
+    color: #000;
+
+}
+
+.rodape-superior .seguranca ul img {
+    width: 30px;
+    height: 30px;
+    gap: 10vw;
+}
+
+.rodape-superior .ajuda ul li a,
+.institucional ul li a,
+.metodos-pagamento ul li a,
+.pagamento ul li a,
+.seguranca ul li a .email p {
+    color: #000;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    display: block;
+    padding: 5px;
+}
+
+.metodos-pagamento-superior {
+    display: none;
+}
+
+.ajuda {
+    color: #000;
+
+    margin-top: 15px;
+}
+
+.las {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+.metodos-pagamento{
+    margin-top: 15px;
+}
+.metodos-pagamento ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+.metodos-pagamento ul li img{
+    width: 25px;
+}
+.institucional {
+    margin-top: 15px;
+}
+
+.institucional li a {
+    color: #c2c2c2;
+}
+
+.seguranca {
+    margin-top: 15px;
+}
+
+.title {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 15pt;
+    font-weight: 600;
+}
+
+.las p {
+    color: #000;
+
+}
+
+.acompanhe-nos ul {
+    color: #000;
+    margin: 5px 0 25px 0;
+    display: none;
+    list-style: none;
+}
+
+.acompanhe-nos ul li img {
+    color: #000;
+    width: 30px;
+    margin: 0 5px;
+}
+
+.email-input {
+    border: 1px solid #201b2c;
+    border-radius: 0;
+    height: 45px;
+    color: #201b2c;
+    padding: 0 4px;
+}
+
+.email-btn {
+    height: 45px;
+    width: 45px;
+    background-color: #201b2c;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.rodape-inferior {
+    height: 100%;
+    display: flex;
+}
+.rodape-inferior ul{
+    display: flex;
+}
+
+.rodape-inferior ul li a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    padding: 15px 0;
+    display: block;
+    margin: 0 25px;
+}
+hr{
+    width: 97%;
+    margin: 0 auto;
+}
+.metodos-pagamento-inferior .title {
+    color: #000;
+}
+
+.metodos-pagamento-inferior ul {
+    display: flex;
+    list-style: none;
+    list-style-type: none;
+}
+
+.metodos-pagamento-inferior ul li img {
+    color: rgb(255, 255, 255);
+    width: 30px;
+    margin: 0 5px;
+}
+
+@media screen and (max-width: 1000px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins';
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
+    #conteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 414px;
+    }
+
+    .produtos {
+        margin: 50px 0;
+        max-width: 412px;
+        position: relative;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav .usos {
+        flex-wrap: wrap;
+    }
+
+    nav .usos .cursor {
+        display: none;
+    }
+
+    nav .usos .search-bar {
+        margin: 10px 0 5px 0;
+    }
+
+    nav.dark {
+        color: white;
+        /* cor do texto quando mudar */
+        backdrop-filter: blur(3px);
+    }
+
+    /* Adicione esta classe para ocultar o menu com animação suave */
+    .hide-menu {
+        opacity: 1;
+        transition: opacity 0.3s ease-out;
+    }
+
+    /* Adicione esta classe para exibir o menu quando o mouse passa sobre ele */
+    nav:not(.hide-menu) {
+        opacity: 1;
+        transition: opacity 0.3s ease-in;
+    }
+
+    .produtos .card-line {
+        display: flex;
+        justify-content: space-between;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+    }
+
+    .carrossel {
+        width: 400px;
+        height: 200px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        top: 100px;
+    }
+
+    .slides {
+        width: 400%;
+        height: 200px;
+        display: flex;
+    }
+
+    .slides input {
+        display: none;
+    }
+
+    .slide img {
+        width: 400px;
+    }
+
+    .navegacao-manual {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .rodape-superior {
+        height: 100%;
+    }
+
+    .rodape-superior .las {
+        width: 50%;
+        align-items: center;
+    }
+
+    .acompanhe-nos ul {
+        display: flex;
+    }
+
+    .email,
+    .institucional,
+    .seguranca {
+        display: none;
+    }
+
+    .rodape-superior .ajuda ul li a {
+        padding: 0;
+    }
+
+    .metodos-pagamento-superior {
+        display: block;
+    }
+
+    .metodos-pagamento-superior ul {
+        margin: 5px 0 0 0;
+        display: flex;
+        list-style: none;
+    }
+
+    .metodos-pagamento-superior ul li img {
+        width: 30px;
+        margin: 0 5px;
+    }
+}

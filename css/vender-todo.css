@@ -1,0 +1,311 @@
+/*Estilização do Meme-lateral*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    text-decoration: none;
+    text-transform: capitalize;
+    list-style-type: none;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*Estilização do Menu-lateral*/
+.seletec-topic{
+    border-left: 6px solid #00FF29;
+    margin: 0 2px;
+}
+.disseletec-topic{
+    margin: 0 8px;
+}
+.menu-lateral{
+    padding: 75px 0;
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: #FFFFFF;
+}
+.menu-lateral .title{
+    padding: 0 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.menu-lateral .title p{
+    font-size: 20px;
+    color: #777777;
+    font-weight: 600;
+    display: none;
+}
+.menu-lateral .title img{
+    width: 20px;
+}
+.menu-lateral ul{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.menu-lateral ul li{
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 60px;
+}
+.menu-lateral ul li p{
+    display: none;
+    color: #777777;
+}
+.menu-lateral ul li img{
+    width: 25px;
+}
+
+/*estilização do conteudo*/
+#container section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 51px;
+}
+#container section .sec1{
+    background-color: #BFC8A0;
+    height: 50vh;
+    width: 100vw;
+    position: relative;
+}
+#container section .sec1 .box_1{
+    background-color: #F5F5F5;
+    position: absolute;
+    bottom: 0px;
+    left: 150px;
+    border-top: #7C8950 solid 3px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 8px 15px;
+}
+#container section .sec1 .box_1 h2{
+    color: #000;
+    font-size: 15pt;
+}
+#container section .sec1 .box_1 h2::after{
+    margin: 0 5px;
+    content: "C";
+    font-size: 10px;
+    position: absolute;
+    top: 15px;
+    padding: 0 3px;
+    background-color: #00FF29;
+    border-radius: 100%;
+}
+#container section .sec1 .box_1 p{
+    color: #000;
+    font-size: 11pt;
+}
+#container section .sec1 .box_2{
+    background-color: #EDEDED;
+    position: absolute;
+    bottom: 0px;
+    left: 400px;
+    border-top: #7C8950 solid 3px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 8px 15px;
+}
+#container section .sec1 .box_2 h2{
+    color: #777777cc;
+    font-size: 15pt;
+}
+#container section .sec1 .box_2 p{
+    color: #777777cc;
+    font-size: 11pt;
+}
+#container section .sec1 a{
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    background-color: #0CFF88;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: 1px solid #777777cc;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+#container section .sec2{
+    background-color: #F5F5F5;
+    height: 100%;
+    width: 100vw;
+    padding: 25px 150px;
+}
+#container section .sec2 ul li{
+    margin: 0 0 15px 0;
+}
+#container section .sec2 ul .search-area{
+    display: flex;
+    justify-content: space-between;
+}
+#container section .sec2 ul .search-area input[type="search"] {
+    width: 350px;
+    border: 0.1px #bdbdbd solid;
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: #000;
+}
+#container section .sec2 ul .usos{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+    width: 797px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 0.1px solid #bdbdbd;
+}
+#container section .sec2 ul .search-area p{
+    color: #000;
+}
+#container section .sec2 ul .usos .teste{
+    border-right: 1px solid #cacaca;
+    padding:0 15px 0 0;
+}
+#container section .sec2 ul .usos div{
+    display: flex;
+    gap: 53px;
+}
+#container section .sec2 ul .usos div button{
+    border: transparent;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    color: #000;
+}
+#container section .sec2 ul .usos div button:hover{
+    text-decoration: underline ;
+}
+#container section .sec2 ul .produtos-area{
+    width: 100%;
+    padding: 25px 0;
+    background-color: #EDEDED;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 0.1px #bdbdbd solid;
+    
+}
+#container section .sec2 ul .produtos-area img{
+    width: 128px;
+}
+#container section .sec2 ul .produtos-area .title{
+    color: #000;
+    font-size: 16pt;
+}
+#container section .sec2 ul .produtos-area .text{
+    color: #000;
+}
+#container section .sec2 ul .produtos-area h1{
+    color: #000;
+}
+#container section .sec2 ul .produtos-area a{
+    text-decoration: none;
+    color: #047817;
+}
+.card {
+    width: 250px;
+    height: 300px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #525252;
+    transition: ease-in-out .3s all;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-favorite-icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 25px;
+    bottom: 15px;
+    transition: all ease-in-out .3s;
+}
+
+.card-favorite-icon img {
+    width: 25px;
+}
+
+.card-favorite-icon:hover {
+    background-color: rgba(218, 218, 218, 0.699);
+}
+
+.card .card-img-main {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.card .card-img-main img {
+    /* hei */
+}
+
+.card .card-title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 15pt;
+    color: white;
+}
+
+.price {
+    padding: 0 0 0 25px;
+}
+
+.card .card-price {
+    color: white;
+    font-size: 13pt;
+}
+
+.card .card-price-discount {
+    color: gray;
+    text-decoration: line-through;
+    font-size: 10pt;
+}
+
+b {
+    color: #00ff88;
+}
+
+.card .card-price-parcelas {
+    color: white;
+}
+
+.card-avaliation img {
+    width: 15px;
+}
+.line{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}

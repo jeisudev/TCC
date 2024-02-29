@@ -1,0 +1,202 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-y: scroll;
+    background-color: #EDEDED;
+    position: relative;
+}
+
+
+/*Estilização do conteudo*/
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 55px;
+    width: 1300px;
+    height: 100vh;
+}
+.bg{
+    background: url('../img/recycling-animate.svg' );
+    background-attachment: fixed;
+    top: 100px;
+    background-repeat: no-repeat;
+    background-size:43%;
+    background-position: center;
+    height: 100vh;
+}
+.button{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    backdrop-filter: blur(5px) brightness(0.6);
+}
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+.iniciar {
+    width: 250px;
+    height: 70px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 8px;
+    border: #ffffff6e solid 2px;
+    text-transform: uppercase;
+    outline: none;
+    font-size: 15pt;
+    font-weight: 600;
+    color: #00ff88;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid #00ff88;
+    transition: .3s ease-in-out all;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.iniciar:hover{
+    background-color: #ffffff9a;
+    background-color: #38304e42;
+}
+.conteudo #information{
+    width:100%;
+}
+.title{
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 20pt;
+    color: black;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#information .sec1 {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+    padding: 25px 50px;
+    margin: 0 auto;
+}
+#information .sec1 img{
+    width: 400px;
+    animation-name: example;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    position: relative;
+} 
+#information .sec1 .title{
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 18pt;
+}
+#information .sec1 p{
+    padding: 0 15px;
+    font-size: 14pt;
+    color: black    ;
+    text-align: justify;
+} 
+@keyframes example {
+    0%   {top:0px;}
+    25%  {top:25px;}
+    50%  {top:0px;}
+    75%  {top:25px;}
+    100% {top:0px;}
+}
+#information .sec2 {
+    width: 90%;
+    margin: 0 auto;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    border-bottom: 1px solid black;
+}
+#information .sec2 img{
+    width: 400px;
+    animation-name: example;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    position: relative;
+} 
+#information .sec2 .title{
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 18pt;
+}
+#information .sec2 p{
+    padding: 0 15px;
+    font-size: 14pt;
+    color: black;
+    text-align: justify;
+}
+
+@media screen and (max-width: 1000px) {
+    .conteudo{
+        width: 100%;
+        height: 100%;
+    }
+    #information .sec1 {
+        padding: 0;
+        padding-bottom: 51px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        border-bottom: 1px solid black;
+    }
+    #information .sec2 {
+        padding: 0;
+        padding-bottom: 51px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        border-bottom: 1px solid black;
+    }
+    
+    .bg{
+        background-size: 100%;
+    }
+    #information .sec1 p, #information .sec2 p{
+        text-align: left;
+    } 
+    nav{
+        width: 414px;
+    }
+    nav .usos{
+        flex-wrap: wrap;
+    }
+    nav .usos{
+        display: none;
+    }
+}
